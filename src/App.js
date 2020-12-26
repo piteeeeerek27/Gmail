@@ -1,9 +1,13 @@
 import React from 'react';
+import './styles/App.css';
+import Header from './compo/Header';
+import Sidebar from './compo/Sidebar';
 
 const App = () => {
 	return (
 		<div className='app'>
-			<h1>App</h1>
+			<Header />
+			<Sidebar />
 		</div>
 	);
 };
