@@ -2,6 +2,9 @@
 	flex: 1;
 	overflow: scroll;
 }
+.emailList::-webkit-scrollbar {
+	display: none;
+}
 .emailList__settings {
 	position: sticky;
 	top: 0;
@@ -10,6 +13,11 @@
 	border-bottom: 1px solid whitesmoke;
 	background: white;
 }
-/* .emailList::-webkit-scrollbar {
-	display: none;
-} */
+.emailList__sections {
+	position: sticky;
+	top: 0;
+	display: flex;
+	background: white;
+	border-bottom: 1px solid whitesmoke;
+	z-index: 999;
+}
