@@ -21,3 +21,15 @@
 	border-bottom: 1px solid whitesmoke;
 	z-index: 999;
 }
+.emailList__list {
+	padding-bottom: 20%;
+}
+
+/* hide scrollbars */
+.emailList::-webkit-scrollbar {
+	display: none;
+}
+.emailList {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
