@@ -1,15 +1,14 @@
-import React from 'react';
-import '../styles/Section.css';
+import React from "react";
+import "../styles/Section.scss";
 
 const Section = ({ title, Icon, color, selected }) => {
 	return (
 		<div
-			className={`section ${selected && 'selection--selected'}`}
+			className={`section ${selected && "selection--selected"}`}
 			style={{
 				borderBottom: `3px solid ${color}`,
 				color: `${selected && color}`,
-			}}
-		>
+			}}>
 			<Icon />
 			<h4>{title}</h4>
 		</div>

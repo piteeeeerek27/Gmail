@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Mail.css";
+import "../styles/Mail.scss";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import MoveToInboxIcon from "@material-ui/icons/MoveToInbox";
 import ErrorIcon from "@material-ui/icons/Error";

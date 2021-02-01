@@ -1,6 +1,6 @@
 import { Checkbox, IconButton } from "@material-ui/core";
 import React from "react";
-import "../styles/EmailRow.css";
+import "../styles/EmailRow.scss";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import LabelImportantIcon from "@material-ui/icons/LabelImportant";
 import { useHistory } from "react-router-dom";
