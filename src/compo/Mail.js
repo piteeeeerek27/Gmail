@@ -22,9 +22,9 @@ const Mail = () => {
 	const selectedMail = useSelector(selectOpenMail);
 
 	return (
-		<div className="mail">
-			<div className="mail__tools">
-				<div className="mail__toolsLeft">
+		<div className="Mail">
+			<div className="MailTools">
+				<div className="MailToolsLeft">
 					<IconButton onClick={() => history.push("/")}>
 						<ArrowBackIcon />
 					</IconButton>
@@ -54,7 +54,7 @@ const Mail = () => {
 					</IconButton>
 				</div>
 
-				<div className="mail__toolsRight">
+				<div className="MailToolsRight">
 					<IconButton>
 						<UnfoldMoreIcon />
 					</IconButton>
@@ -68,15 +68,15 @@ const Mail = () => {
 					</IconButton>
 				</div>
 			</div>
-			<div className="mail__body">
-				<div className="mail__bodyHeader">
+			<div className="MailBody">
+				<div className="MailBodyHeader">
 					<h2>{selectedMail?.subject}</h2>
-					<LabelImportantIcon className="mail__important" />
+					<LabelImportantIcon className="MailBodyHeaderImportant" />
 					<p>{selectedMail?.title}</p>
-					<p className="mail__time">{selectedMail?.time}</p>
+					<p className="MailBodyHeaderTime">{selectedMail?.time}</p>
 				</div>
 
-				<div className="mail__message">
+				<div className="MailBodyMessage">
 					<p>{selectedMail?.description}</p>
 				</div>
 			</div>

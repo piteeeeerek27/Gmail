@@ -26,8 +26,8 @@ function EmailRow({ title, subject, description, time, id }) {
 	};
 
 	return (
-		<div onClick={openMail} className="emailRow">
-			<div className="emailRow__options">
+		<div onClick={openMail} className="EmailRow">
+			<div className="EmailRowOptions">
 				<Checkbox />
 				<IconButton>
 					<StarBorderIcon />
@@ -37,16 +37,15 @@ function EmailRow({ title, subject, description, time, id }) {
 				</IconButton>
 			</div>
 
-			<h3 className="emailRow__title">{title}</h3>
+			<h3 className="EmailRowTitle">{title}</h3>
 
-			<div className="emailRow__message">
+			<div className="EmailRowMessage">
 				<h4>
-					{subject} {" - "}{" "}
-					<span className="emailRow__description">{description}</span>
+					{subject} {" - "} <span className="EmailRowDescr">{description}</span>
 				</h4>
 			</div>
 
-			<p className="emailRow__description">{time}</p>
+			<p className="EmailRowTime">{time}</p>
 		</div>
 	);
 }

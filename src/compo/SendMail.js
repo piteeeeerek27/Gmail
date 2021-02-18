@@ -4,7 +4,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import { Button } from "@material-ui/core";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { closeSendMessage } from "../features/mailSlice";
+import { closeMessage } from "../features/mailSlice";
 import { db } from "./firebase";
 import firebase from "firebase";
 
@@ -20,18 +20,18 @@ function SendMail() {
 			timestamp: firebase.firestore.FieldValue.serverTimestamp(),
 		});
 
-		dispatch(closeSendMessage());
+		dispatch(closeMessage());
 	};
 
 	const dispatch = useDispatch();
 
 	return (
-		<div className="sendMail">
-			<div className="sendMail__header">
+		<div className="SendMail">
+			<div className="SendMailHeader">
 				<h3>New Message</h3>
 				<CloseIcon
-					onClick={() => dispatch(closeSendMessage())}
-					className="sendMail__close"
+					onClick={() => dispatch(closeMessage())}
+					className="SendMailHeaderClose"
 				/>
 			</div>
 
@@ -43,7 +43,7 @@ function SendMail() {
 					ref={register({ required: true })}
 				/>
 
-				{errors.to && <p className="sendMail__error">To is Required!</p>}
+				{errors.to && <p className="SendMailError">To is Required!</p>}
 
 				<input
 					name="subject"
@@ -51,19 +51,19 @@ function SendMail() {
 					placeholder="Subject"
 					ref={register({ required: true })}
 				/>
-				{errors.to && <p className="sendMail__error">Subject is Required!</p>}
+				{errors.to && <p className="SendMailError">Subject is Required!</p>}
 				<input
 					name="message"
 					type="text"
 					placeholder="Message..."
-					className="sendMail__message"
+					className="SendMailMessage"
 					ref={register({ required: true })}
 				/>
-				{errors.to && <p className="sendMail__error">Message is Required!</p>}
+				{errors.to && <p className="SendMailError">Message is Required!</p>}
 
-				<div className="sendMail__options">
+				<div>
 					<Button
-						className="sendMail__send"
+						className="SendMailSend"
 						type="submit"
 						variant="contained"
 						color="primary">

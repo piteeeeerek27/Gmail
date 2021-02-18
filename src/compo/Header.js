@@ -20,8 +20,8 @@ const Header = () => {
 		});
 	};
 	return (
-		<div className="header">
-			<div className="header__left">
+		<div className="Header">
+			<div className="HeaderLeft">
 				<IconButton>
 					<MenuIcon />
 				</IconButton>
@@ -31,13 +31,13 @@ const Header = () => {
 				/>
 			</div>
 
-			<div className="header__middle">
+			<div className="HeaderMiddle">
 				<SearchIcon />
 				<input type="text" placeholder="Search mail" />
-				<ArrowDropDownIcon className="header__inputCaret" />
+				<ArrowDropDownIcon />
 			</div>
 
-			<div className="header__right">
+			<div className="HeaderRight">
 				<IconButton>
 					<AppsIcon />
 				</IconButton>
@@ -45,7 +45,7 @@ const Header = () => {
 					<NotificationsIcon />
 				</IconButton>
 				<Avatar
-					className="header__avatar"
+					className="HeaderRightAvatar"
 					onClick={signOut}
 					src={user?.photoUrl}
 				/>
